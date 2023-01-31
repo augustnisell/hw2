@@ -92,26 +92,82 @@ warner_bros.save
 # Insert "Batman Begins" to the movies table
 batman_begins = Movie.new
 batman_begins["title"] = "Batman Begins"
-batman_begins["year"] = 2005
-batman_begins["mpaa_rating"] = "PG-13"
+batman_begins["year_released"] = 2005
+batman_begins["rated"] = "PG-13"
 batman_begins["studio_id"] = warner_bros["id"]
 batman_begins.save
 
 # Insert "The Dark Knight" to the movies table
 the_dark_knight = Movie.new
 the_dark_knight["title"] = "The Dark Knight"
-the_dark_knight["year"] = 2008
-the_dark_knight["mpaa_rating"] = "PG-13"
+the_dark_knight["year_released"] = 2008
+the_dark_knight["rated"] = "PG-13"
 the_dark_knight["studio_id"] = warner_bros["id"]
 the_dark_knight.save
 
 # Insert "The Dark Knight Rises" to the movies table
 the_dark_knight_rises = Movie.new
 the_dark_knight_rises["title"] = "The Dark Knight Rises"
-the_dark_knight_rises["year"] = 2012
-the_dark_knight_rises["mpaa_rating"] = "PG-13"
+the_dark_knight_rises["year_released"] = 2012
+the_dark_knight_rises["rated"] = "PG-13"
 the_dark_knight_rises["studio_id"] = warner_bros["id"]
 the_dark_knight_rises.save
+
+# Actor
+# Insert "Christian Bale" to the actors table
+christian_bale = Actor.new
+christian_bale["name"] = "Christian Bale"
+christian_bale.save
+
+# Insert "Michael Caine" to the actors table
+michael_caine = Actor.new
+michael_caine["name"] = "Michael Caine"
+michael_caine.save
+
+# Insert "Liam Neeson" to the actors table
+liam_neeson = Actor.new
+liam_neeson["name"] = "Liam Neeson"
+liam_neeson.save
+
+# Insert "Katie Holmes" to the actors table
+katie_holmes = Actor.new
+katie_holmes["name"] = "Katie Holmes"
+katie_holmes.save
+
+# Insert "Gary Oldman" to the actors table
+gary_oldman = Actor.new
+gary_oldman["name"] = "Gary Oldman"
+gary_oldman.save
+
+# Insert "Heath Ledger" to the actors table
+heath_ledger = Actor.new
+heath_ledger["name"] = "Heath Ledger"
+heath_ledger.save
+
+# Insert "Aaron Eckhart" to the actors table
+aaron_eckhart = Actor.new
+aaron_eckhart["name"] = "Aaron Eckhart"
+aaron_eckhart.save
+
+# Insert "Maggie Gyllenhaal" to the actors table
+maggie_gyllenhaal = Actor.new
+maggie_gyllenhaal["name"] = "Maggie Gyllenhaal"
+maggie_gyllenhaal.save
+
+# Insert "Tom Hardy" to the actors table
+tom_hardy = Actor.new
+tom_hardy["name"] = "Tom Hardy"
+tom_hardy.save
+
+# Insert "Joseph Gordon-Levitt" to the actors table
+joseph_gordon_levitt = Actor.new
+joseph_gordon_levitt["name"] = "Joseph Gordon-Levitt"
+joseph_gordon_levitt.save
+
+# Insert "Anne Hathaway" to the actors table
+anne_hathaway = Actor.new
+anne_hathaway["name"] = "Anne Hathaway"
+anne_hathaway.save
 
 
 # Prints a header for the movies output
