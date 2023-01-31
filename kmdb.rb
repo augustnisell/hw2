@@ -82,6 +82,38 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+# Studio
+# Insert "Warner Bros." to the studios table
+warner_bros = Studio.new
+warner_bros["name"] = "Warner Bros."
+warner_bros.save
+
+# Movie
+# Insert "Batman Begins" to the movies table
+batman_begins = Movie.new
+batman_begins["title"] = "Batman Begins"
+batman_begins["year"] = 2005
+batman_begins["mpaa_rating"] = "PG-13"
+batman_begins["studio_id"] = warner_bros["id"]
+batman_begins.save
+
+# Insert "The Dark Knight" to the movies table
+the_dark_knight = Movie.new
+the_dark_knight["title"] = "The Dark Knight"
+the_dark_knight["year"] = 2008
+the_dark_knight["mpaa_rating"] = "PG-13"
+the_dark_knight["studio_id"] = warner_bros["id"]
+the_dark_knight.save
+
+# Insert "The Dark Knight Rises" to the movies table
+the_dark_knight_rises = Movie.new
+the_dark_knight_rises["title"] = "The Dark Knight Rises"
+the_dark_knight_rises["year"] = 2012
+the_dark_knight_rises["mpaa_rating"] = "PG-13"
+the_dark_knight_rises["studio_id"] = warner_bros["id"]
+the_dark_knight_rises.save
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
