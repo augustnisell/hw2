@@ -287,6 +287,15 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
+movies = Movie.all
+for movie in movies
+    title = movie["title"]
+    year_released = movie["year_released"]
+    rated = movie["rated"]
+    studio_name = Studio.find_by("id" => movie["studio_id"])
+    puts "#{title} - #{year_released} - Rated #{rated} - #{studio_name["name"]}"
+end
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -295,3 +304,12 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+movies = Movie.all
+for movie in movies
+    roles = Role.where("movie_id" => movie["id"])
+    for role in roles
+        actor = Actor.find_by("id" => role["actor_id"])
+        puts "#{movie["title"]} - #{actor["name"]} - #{role["character_name"]}"
+    end
+end
