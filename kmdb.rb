@@ -169,6 +169,115 @@ anne_hathaway = Actor.new
 anne_hathaway["name"] = "Anne Hathaway"
 anne_hathaway.save
 
+# Role
+# Batman Begins
+# Insert "Bruce Wayne" to the roles table
+bruce_wayne = Role.new
+bruce_wayne["movie_id"] = batman_begins["id"]
+bruce_wayne["actor_id"] = christian_bale["id"]
+bruce_wayne["character_name"] = "Bruce Wayne"
+bruce_wayne.save
+
+# Insert "Alfred" to the roles table
+alfred = Role.new
+alfred["movie_id"] = batman_begins["id"]
+alfred["actor_id"] = michael_caine["id"]
+alfred["character_name"] = "Alfred"
+alfred.save
+
+# Insert "Ra's al Ghul" to the roles table
+ras_al_ghul = Role.new
+ras_al_ghul["movie_id"] = batman_begins["id"]
+ras_al_ghul["actor_id"] = liam_neeson["id"]
+ras_al_ghul["character_name"] = "Ra's al Ghul"
+ras_al_ghul.save
+
+# Insert "Rachel Dawes" to the roles table
+rachel_dawes = Role.new
+rachel_dawes["movie_id"] = batman_begins["id"]
+rachel_dawes["actor_id"] = katie_holmes["id"]
+rachel_dawes["character_name"] = "Rachel Dawes"
+rachel_dawes.save
+
+# Insert "Commissioner Gordon" to the roles table
+commissioner_gordon = Role.new
+commissioner_gordon["movie_id"] = batman_begins["id"]
+commissioner_gordon["actor_id"] = gary_oldman["id"]
+commissioner_gordon["character_name"] = "Commissioner Gordon"
+commissioner_gordon.save
+
+# The Dark Knight
+# Insert "Bruce Wayne" to the roles table
+bruce_wayne = Role.new
+bruce_wayne["movie_id"] = the_dark_knight["id"]
+bruce_wayne["actor_id"] = christian_bale["id"]
+bruce_wayne["character_name"] = "Bruce Wayne"
+bruce_wayne.save
+
+# Insert "Joker" to the roles table
+joker = Role.new
+joker["movie_id"] = the_dark_knight["id"]
+joker["actor_id"] = heath_ledger["id"]
+joker["character_name"] = "Joker"
+joker.save
+
+# Insert "Harvey Dent" to the roles table
+harvey_dent = Role.new
+harvey_dent["movie_id"] = the_dark_knight["id"]
+harvey_dent["actor_id"] = aaron_eckhart["id"]
+harvey_dent["character_name"] = "Harvey Dent"
+harvey_dent.save
+
+# Insert "Alfred" to the roles table
+alfred = Role.new
+alfred["movie_id"] = the_dark_knight["id"]
+alfred["actor_id"] = michael_caine["id"]
+alfred["character_name"] = "Alfred"
+alfred.save
+
+# Insert "Rachel Dawes" to the roles table
+rachel_dawes = Role.new
+rachel_dawes["movie_id"] = the_dark_knight["id"]
+rachel_dawes["actor_id"] = katie_holmes["id"]
+rachel_dawes["character_name"] = "Rachel Dawes"
+rachel_dawes.save
+
+# The Dark Knight Rises
+# Insert "Bruce Wayne" to the roles table
+bruce_wayne = Role.new
+bruce_wayne["movie_id"] = the_dark_knight_rises["id"]
+bruce_wayne["actor_id"] = christian_bale["id"]
+bruce_wayne["character_name"] = "Bruce Wayne"
+bruce_wayne.save
+
+# Insert "Commissioner Gordon" to the roles table
+commissioner_gordon = Role.new
+commissioner_gordon["movie_id"] = the_dark_knight_rises["id"]
+commissioner_gordon["actor_id"] = gary_oldman["id"]
+commissioner_gordon["character_name"] = "Commissioner Gordon"
+commissioner_gordon.save
+
+# Insert "Bane" to the roles table
+bane = Role.new
+bane["movie_id"] = the_dark_knight_rises["id"]
+bane["actor_id"] = tom_hardy["id"]
+bane["character_name"] = "Bane"
+bane.save
+
+# Insert "John Blake" to the roles table
+john_blake = Role.new
+john_blake["movie_id"] = the_dark_knight_rises["id"]
+john_blake["actor_id"] = joseph_gordon_levitt["id"]
+john_blake["character_name"] = "John Blake"
+john_blake.save
+
+# Insert "Selina Kyle" to the roles table
+selina_kyle = Role.new
+selina_kyle["movie_id"] = the_dark_knight_rises["id"]
+selina_kyle["actor_id"] = anne_hathaway["id"]
+selina_kyle["character_name"] = "Selina Kyle"
+selina_kyle.save
+
 
 # Prints a header for the movies output
 puts "Movies"
