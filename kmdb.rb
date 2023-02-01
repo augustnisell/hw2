@@ -287,13 +287,28 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
+# movies = Movie.all
+# for movie in movies
+#     title = movie["title"]
+#     year_released = movie["year_released"]
+#     rated = movie["rated"]
+#     studio_name = Studio.find_by("id" => movie["studio_id"])
+#     puts "#{title} - #{year_released} - Rated #{rated} - #{studio_name["name"]}"
+# end
+
+column_widths = [25, 10, 15, 20]
 movies = Movie.all
 for movie in movies
     title = movie["title"]
     year_released = movie["year_released"]
     rated = movie["rated"]
-    studio_name = Studio.find_by("id" => movie["studio_id"])
-    puts "#{title} - #{year_released} - Rated #{rated} - #{studio_name["name"]}"
+    studio_name = Studio.find_by("id" => movie["studio_id"])["name"]
+    
+    print "#{title}" + " " * (column_widths[0] - title.length)
+    print "#{year_released}" + " " * (column_widths[1] - year_released.to_s.length)
+    print "#{rated}" + " " * (column_widths[2] - rated.length)
+    print "#{studio_name}" + " " * (column_widths[3] - studio_name.length)
+    puts ""
 end
 
 # Prints a header for the cast output
@@ -305,11 +320,20 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
+column_widths = [25, 25, 25]
 movies = Movie.all
 for movie in movies
     roles = Role.where("movie_id" => movie["id"])
     for role in roles
         actor = Actor.find_by("id" => role["actor_id"])
-        puts "#{movie["title"]} - #{actor["name"]} - #{role["character_name"]}"
+
+        movie_title = movie["title"]
+        actor_name = actor["name"]
+        character_name = role["character_name"]
+
+        print "#{movie_title}" + " " * (column_widths[0] - movie_title.length)
+        print "#{actor_name}" + " " * (column_widths[1] - actor_name.length)
+        print "#{character_name}" + " " * (column_widths[2] - character_name.length)
+        puts ""
     end
 end
